@@ -1,7 +1,7 @@
 package com.apress.todo.controller;
 
 import com.apress.todo.domain.ToDo;
-import com.apress.todo.repository.TodoRepository;
+import com.apress.todo.repository.ToDoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -26,10 +26,10 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("/")
 public class ToDoController {
 
-    private final TodoRepository repository;
+    private final ToDoRepository repository;
 
     @Autowired
-    public ToDoController(TodoRepository repository) {
+    public ToDoController(ToDoRepository repository) {
         this.repository = repository;
     }
 
